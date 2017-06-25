@@ -1,0 +1,355 @@
+<html>
+<head><style type='text/css'>
+body, table {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    font-style: italic;
+}
+
+.selected {
+    background-color: #ffffcc;
+}
+
+.status_done {
+    background-color: #eeffee;
+}
+
+.status_passed {
+    background-color: #ccffcc;
+}
+
+.status_failed {
+    background-color: #ffcccc;
+}
+
+.breakpoint {
+    background-color: #cccccc;
+    border: 1px solid black;
+}
+</style><title>Test suite results</title></head>
+<body>
+<h1>Test suite results </h1>
+
+<table>
+<tr>
+<td>result:</td>
+<td>passed</td>
+</tr>
+<tr>
+<td>totalTime:</td>
+<td>7</td>
+</tr>
+<tr>
+<td>numTestTotal:</td>
+<td>4</td>
+</tr>
+<tr>
+<td>numTestPasses:</td>
+<td>4</td>
+</tr>
+<tr>
+<td>numTestFailures:</td>
+<td>0</td>
+</tr>
+<tr>
+<td>numCommandPasses:</td>
+<td>0</td>
+</tr>
+<tr>
+<td>numCommandFailures:</td>
+<td>0</td>
+</tr>
+<tr>
+<td>numCommandErrors:</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Selenium Version:</td>
+<td>2.53</td>
+</tr>
+<tr>
+<td>Selenium Revision:</td>
+<td>.1</td>
+</tr>
+<tr>
+<td>
+<table id="suiteTable" class="selenium" cellspacing="1" cellpadding="1" border="1"><tbody>
+<tr class="title status_passed"><td><b>Test Suite</b></td></tr>
+<tr class="  status_passed"><td><a href="#testresult0">login_form</a></td></tr>
+<tr class="  status_passed"><td><a href="#testresult1">create_coupon</a></td></tr>
+<tr class="  status_passed"><td><a href="#testresult2">find_and_delete_coupon</a></td></tr>
+<tr class="  status_passed"><td><a href="#testresult3">logout</a></td></tr>
+</tbody></table>
+
+
+</td>
+<td>&nbsp;</td>
+</tr>
+</table><table><tr>
+<td><a name="testresult0">login_form.html</a><br/><div>
+<table cellspacing="1" cellpadding="1" border="1">
+<thead>
+<tr class="title status_passed"><td rowspan="1" colspan="3">login_form</td></tr>
+</thead><tbody>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>open</td>
+	<td>http://open-eshop.stqa.ru/oc-panel/auth/login/</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>waitForElementPresent</td>
+	<td>css=section#page h1</td>
+	<td>Login</td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>type</td>
+	<td>css=div#login-modal input[name='email']</td>
+	<td>demo@open-eshop.com</td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>type</td>
+	<td>css=div#login-modal input[name='password']</td>
+	<td>demo</td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>click</td>
+	<td>css=div#login-modal i.glyphicon-user</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>waitForElementPresent</td>
+	<td>css=div#content&nbsp;&nbsp;h1</td>
+	<td>Welcome admin</td>
+</tr>
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr><tr>
+<td><a name="testresult1">create_coupon.html</a><br/><div>
+<table cellspacing="1" cellpadding="1" border="1">
+<thead>
+<tr class="title status_passed"><td rowspan="1" colspan="3">create_coupon</td></tr>
+</thead><tbody>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>open</td>
+	<td>/oc-panel</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>click</td>
+	<td>//a[contains(@href, 'collapseOne')]</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>waitForElementPresent</td>
+	<td>//a[contains(@title, 'Coupons')]</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>click</td>
+	<td>//a[contains(@title, 'Coupons')]</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>waitForElementPresent</td>
+	<td>css=div#content&nbsp;&nbsp;i.glyphicon-pencil</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>click</td>
+	<td>css=div#content&nbsp;&nbsp;i.glyphicon-pencil</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>waitForValue</td>
+	<td>id=number_coupons</td>
+	<td>1</td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>sendKeys</td>
+	<td>id=name</td>
+	<td>pavlov</td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>sendKeys</td>
+	<td>name=valid_date</td>
+	<td>2017-06-30</td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>type</td>
+	<td>id=number_coupons</td>
+	<td>6</td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>click</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>waitForTable</td>
+	<td>//div[@class='table-responsive']/table.1.0</td>
+	<td>pavlov</td>
+</tr>
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr><tr>
+<td><a name="testresult2">find_and_delete_coupon.html</a><br/><div>
+<table cellspacing="1" cellpadding="1" border="1">
+<thead>
+<tr class="title status_passed"><td rowspan="1" colspan="3">find_and_delete_coupon</td></tr>
+</thead><tbody>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>open</td>
+	<td>/oc-panel/Coupon</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>type</td>
+	<td>name=name</td>
+	<td>pavlov</td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>click</td>
+	<td>css=form.form-inline &gt; button.btn</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>click</td>
+	<td>css=i.glyphicon-trash</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>waitForElementPresent</td>
+	<td>css=div.visible</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>click</td>
+	<td>css=div.sweet-alert &gt; button.confirm</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>waitForElementNotPresent</td>
+	<td>css=div.visible</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>click</td>
+	<td>css=div#content a:contains('Coupon')</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>waitForNotTable</td>
+	<td>//div[@class='table-responsive']/table.1.0</td>
+	<td>pavlov</td>
+</tr>
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr><tr>
+<td><a name="testresult3">logout.html</a><br/><div>
+<table cellspacing="1" cellpadding="1" border="1">
+<thead>
+<tr class="title status_passed"><td rowspan="1" colspan="3">logout</td></tr>
+</thead><tbody>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>click</td>
+	<td>css=a[data-toggle=dropdown]</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>waitForElementPresent</td>
+	<td>css=i.glyphicon-off</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>click</td>
+	<td>css=i.glyphicon-off</td>
+	<td></td>
+</tr>
+<tr style="cursor: pointer;" class="  status_done">
+	<td>waitForElementPresent</td>
+	<td>css=section#page h1</td>
+	<td>Login</td>
+</tr>
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr></table><pre>
+info: Starting test /selenium-server/tests/login_form.html
+info: Executing: |open | http://open-eshop.stqa.ru/oc-panel/auth/login/ |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |waitForElementPresent | css=section#page h1 | Login |
+info: Executing: |type | css=div#login-modal input[name=&apos;email&apos;] | demo@open-eshop.com |
+info: Executing: |type | css=div#login-modal input[name=&apos;password&apos;] | demo |
+info: Executing: |click | css=div#login-modal i.glyphicon-user |  |
+info: Executing: |waitForElementPresent | css=div#content  h1 | Welcome admin |
+info: Starting test /selenium-server/tests/create_coupon.html
+info: Executing: |open | /oc-panel |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |click | //a[contains(@href, &apos;collapseOne&apos;)] |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |waitForElementPresent | //a[contains(@title, &apos;Coupons&apos;)] |  |
+info: Executing: |click | //a[contains(@title, &apos;Coupons&apos;)] |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |waitForElementPresent | css=div#content  i.glyphicon-pencil |  |
+info: Executing: |click | css=div#content  i.glyphicon-pencil |  |
+info: Executing: |waitForValue | id=number_coupons | 1 |
+info: Executing: |sendKeys | id=name | pavlov |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |sendKeys | name=valid_date | 2017-06-30 |
+info: Executing: |type | id=number_coupons | 6 |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |click | name=submit |  |
+info: Executing: |waitForTable | //div[@class=&apos;table-responsive&apos;]/table.1.0 | pavlov |
+info: Starting test /selenium-server/tests/find_and_delete_coupon.html
+info: Executing: |open | /oc-panel/Coupon |  |
+info: Executing: |type | name=name | pavlov |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |click | css=form.form-inline &gt; button.btn |  |
+info: Executing: |pause | 1000 |  |
+info: Executing: |click | css=i.glyphicon-trash |  |
+info: Executing: |waitForElementPresent | css=div.visible |  |
+info: Executing: |click | css=div.sweet-alert &gt; button.confirm |  |
+info: Executing: |waitForElementNotPresent | css=div.visible |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |click | css=div#content a:contains(&apos;Coupon&apos;) |  |
+info: Executing: |waitForNotTable | //div[@class=&apos;table-responsive&apos;]/table.1.0 | pavlov |
+info: Starting test /selenium-server/tests/logout.html
+info: Executing: |click | css=a[data-toggle=dropdown] |  |
+info: Executing: |waitForElementPresent | css=i.glyphicon-off |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |click | css=i.glyphicon-off |  |
+info: Executing: |waitForElementPresent | css=section#page h1 | Login |
+</pre></body></html>
